@@ -1,0 +1,12 @@
+.header {
+  padding: 10px 20px;
+  background-color: #fff;
+  height: 60px;
+  position:fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.header_left {
+  flex: 1;
+}

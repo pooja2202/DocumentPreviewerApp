@@ -1,0 +1,108 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px; 
+  background-color: #f0f0f0;
+  height: calc(100vh - 60px);
+}
+
+.right-section {
+  width: calc(100vw - 375px);
+  margin:  2rem 0.3rem 2rem 0.8rem;
+  flex-grow: 1;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: calc(100vh - 120px);
+}
+
+ .shadow-effect {
+  background-color: #fff; 
+  border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+
+.left-section {
+  width: 375px;
+  flex-shrink: 0;
+  margin: 2rem 0.3rem;
+  height: calc(100vh - 120px);
+  overflow: auto;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+  margin-bottom: 20px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.field:hover {
+  background-color: #e0e0e0;
+}
+
+.field.selected {
+  background-color: #a0a0a0;
+  color: white;
+}
+
+.image-container {
+  /* flex: 1; */
+  position: relative;
+}
+
+.highlighted-image {
+  width: 100%;
+}
+
+.highlight-box {
+  border: 2px solid blue;
+  box-sizing: border-box;
+  pointer-events: none; 
+}
+/* zoom */
+.document-previewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zoom-dropdown {
+  margin-bottom: 10px;
+}
+
+.image-container {
+  overflow: auto;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+.highlighted-image {
+  display: block;
+  margin: auto;
+}
+
+.highlight-box {
+  border: 2px solid blue;
+  box-sizing: border-box;
+  pointer-events: none;
+}

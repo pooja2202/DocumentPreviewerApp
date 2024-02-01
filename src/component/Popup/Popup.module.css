@@ -1,0 +1,41 @@
+.popup_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn_confirm_config{
+     width:40%;
+    border-radius:5px;
+    height:30px;
+    border: none;
+    background: #28a745  0% 0% no-repeat padding-box;
+    color: #fff;
+}
+
+.btn_close_config{
+     width:40%;
+    border-radius:5px;
+    height:30px;
+    border: none;
+    background: #6c757d  0% 0% no-repeat padding-box;
+    color: #fff;
+}

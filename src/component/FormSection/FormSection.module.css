@@ -1,0 +1,108 @@
+.position_rel{
+    position: relative;
+}
+
+.inner_section_config{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.margin_3{
+    margin: 0.3rem 0 ;
+}
+
+.display_fl_config{
+    display: flex ;
+    align-items: center;
+}
+
+.input_checkbox{
+     width: 20px ;
+     height: 20px;
+}
+
+.more_btn_config{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.remove_btn_config{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: fit-content;
+    background: #d9130f;
+    padding: 10px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.color_white{
+    color: #fff;
+}
+
+.color_black{
+    color: #000;
+}
+
+.footer_btn_group{
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    z-index: 1;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.w_50{
+    width: 50%;
+}
+
+.initial_letter_div_config{
+      flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    border-radius: 5px;
+    opacity: 0.2;
+}
+
+.display_label_config{
+     flex: 60%;
+    margin-left: 1rem;
+}
+
+.input_checkbox_div_config{
+     flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_config{
+    width:40%;
+    border-radius:5px;
+    height:30px;
+    border: none;
+}
+
+.btn_all_config{
+     width:40%;
+    border-radius:5px;
+    height:30px;
+    border: none;
+    background: #215297  0% 0% no-repeat padding-box;
+    color: #fff;
+}
