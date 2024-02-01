@@ -43,5 +43,8 @@ Once the build process is complete, the generated build files in the `build` fol
 # Dependencies
 This project relies on ReactJS and various packages from the React ecosystem. All dependencies are listed in the package.json file.
 
+# Lighthouse Stats
+![Screenshot](screenshot.png)
+
 # Contributors
 This project was developed by Pooja Bisht
