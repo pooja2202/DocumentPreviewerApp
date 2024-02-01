@@ -15,7 +15,7 @@ const DocumentPreviewer = ({
     setZoomLevel(e.target.value);
   };
 
-  //Function to handle zoom on document
+  // Function to handle zoom on document
   const calculateZoomStyle = () => {
     switch (zoomLevel) {
       case "fit":
@@ -26,6 +26,43 @@ const DocumentPreviewer = ({
         return { width: "100%", height: "auto" };
       default:
         return { width: "100%", height: "auto" };
+    }
+  };
+
+  // Function to calculate highlighted box dimensions with respect to zoom
+  const calculateHighlightBoxDimensions = () => {
+    const zoomFactor = calculateZoomFactor(); // Get the current zoom factor
+    const adjustedHighlightPosition = highlightPosition.map(
+      (pos) => pos * zoomFactor
+    ); // Adjust position based on zoom level
+    const width = adjustedHighlightPosition[2] - adjustedHighlightPosition[0];
+    const height = adjustedHighlightPosition[3] - adjustedHighlightPosition[1];
+
+    const left = adjustedHighlightPosition[0] / 1.33;
+    const top = adjustedHighlightPosition[1] / 1.33;
+    const right = adjustedHighlightPosition[2] / 1.33;
+    const bottom = adjustedHighlightPosition[3] / 1.33;
+
+    return {
+      left,
+      top,
+      right,
+      bottom,
+      width,
+      height,
+    };
+  };
+
+  const calculateZoomFactor = () => {
+    switch (zoomLevel) {
+      case "fit":
+        return 1; // no zoom
+      case "75%":
+        return 0.75; // 75% zoom
+      case "100%":
+        return 1; // 100% zoom
+      default:
+        return 1; // default to no zoom
     }
   };
 
@@ -73,12 +110,7 @@ const DocumentPreviewer = ({
             className="highlight-box"
             style={{
               position: "absolute",
-              left: highlightPosition[0] / 1.33, // since image's aspect ratio is changed then same calculation applied for plotting highlighting box
-              top: highlightPosition[1] / 1.33,
-              right: highlightPosition[2] / 1.33,
-              bottom: highlightPosition[3] / 1.33,
-              width: highlightPosition[2] / 1.33 - highlightPosition[0] / 1.33,
-              height: highlightPosition[3] / 1.33 - highlightPosition[1] / 1.33,
+              ...calculateHighlightBoxDimensions(), // Apply calculated dimensions
             }}
           />
         )}
